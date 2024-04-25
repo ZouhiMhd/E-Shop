@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+
+:root {
+    
+    --poppins: 'Poppins', sans-serif;
+    --lato : 'Lato', sans-serif;
+
+    --white:#FFFFFF;
+    --light-pink:#FAF4F4;
+    --light-light-pink:#FFF9E5;
+    --grey:#9F9F9F;
+    --light-grey:#D9D9D9;
+    --black:#000000;
+    --middle-light-pink:#FFF9E5;
+    --special-pink:#FBEBB5;
+    --yellow:#FFDA5B;
+    --brown-yellow:#B88E2F;
+    --blu:#816DFA;
+    --strange-grey:#CDBA7B;
+    --red:#FF0000;
+
+}
+
+
+body
+	{
+	font-family: "Tempus Sans ITC";
+    font-size: 13px;
+    color: #1a1111;
+    background-color: var(--white);
+	}
+hr{
+    border: 1px solid var(--grey);
+}
+
+a {
+  color: inherit;      
+  text-decoration: none; 
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+.active{
+    color: var(--black);
+}
+
+h1, h2,h3{
+    text-align: left;
+    padding-left: 0px;
+}
+h1  {
+    font-size: 42px;
+    padding-bottom: 15px;
+}
+h2{
+    font-size: 24;
+    color: var(--grey);
+    padding-bottom: 10px;
+}
+h3{
+    font-size: 14px;
+    padding: 10px;
+    color: var(--grey);
+}
+/* L'entête */
+
+header{
+    height: 100%;
+}
+header .menu-haut, header .menu-haut-home{
+    display: flex;
+    background-color: var(--white);
+    height: 90px;
+}
+header .menu-haut-home{
+    background-color: var(--special-pink);
+}
+header ul  li{
+    display: inline-block;
+    padding: 15px;
+    height: 100%;
+}
+
+header .menu {
+    width: 70%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .option{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .menu-second{
+    height: 100px;
+    padding-left: 50px;
+    display: flex;
+    color: var(--grey);
+}
+
+/*Le corps */
+
+main{
+    width: 100%;
+    height: 820px;
+}
+
+main .presentation, main .presentation-home{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+}
+main .presentation-home{
+    background-color: var(--special-pink);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 800px;
+}
+
+main .presentation-home .title-big-article{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+    margin: 10px;
+}
+main .presentation-home .title-big-article h1{
+    font-size: 64px;
+}
+main .presentation-home .title-big-article p{
+    font-size: 24px;
+}
+main .presentation-home .title-big-article hr{
+    height: 0px;
+    width: 121px;
+    border:0.5px solid var(--black);
+}
+main .presentation-home img
+{
+    /* Rocket single seater 1 */
+
+filter: drop-shadow(0px 28px 30px rgba(0, 0, 0, 0.1));
+transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.affiche{
+    
+    height: 316px;
+}
+main .presentation-check{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.logo{
+    height: 75px;
+    width: 75px;
+}
+.superposed-word{
+    position: absolute;  
+    background-color: transparent;
+    color: var(--black);
+    display: inline-block;
+    align-items: center;
+    margin: 5% auto;
+    width: 230px;
+    height: 100%;
+}
+.superposed-word div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .presentation .presentation-product .auxilary div{
+    background-color: var(--light-light-pink);
+    margin-bottom: 20px;
+}
+main .presentation .presentation-product .principal{
+    background-color: var(--light-light-pink);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+main .presentation .auxilary{
+    display: block;
+    justify-content:space-around;
+    align-items: center;
+    width: 76px;
+}
+main .presentation .principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 423px;
+}
+main img{
+    width:100%;
+    height:100%;
+}
+main .presentation-product{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+}
+main .presentation-desc{
+    width: 45%;
+}
+
+main .presentation-desc ul hr, header ul hr{
+    height: 25px;
+    margin: 0 auto;
+    width: 0px;
+}
+main .presentation-desc .fa.fa-star{
+    color: var(--yellow);
+}
+main .presentation-desc .stars li p{
+    color: var(--grey);
+}
+
+main .presentation-desc .sizes li {
+    font-size: 13px;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+main .presentation-desc .sizes button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 0px;
+    cursor: pointer;
+    border: var(--black) 1px solid;
+    width: 30px;
+    height: 30px;
+}
+
+main .presentation-desc .first-size {
+    background-color: var(--special-pink);
+}
+main .presentation-desc ul .second-size {
+    background-color: var(--light-pink);
+}
+main .presentation-desc ul .third-size {
+    background-color: var(--light-pink);
+}
+
+main .caracteristics{
+    display: inline-block;
+    align-items: center;
+}
+main .color button {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    padding: 7px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+main .color .cercle-1 {
+    background-color: var(--blu);
+}
+main .color .cercle-2 {
+    background-color: var(--black);
+}
+main .color .cercle-3 {
+    background-color: var(--strange-grey);
+}
+
+main .buy {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+main button .buy .add{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+main .buy .add button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 0px;
+    cursor: pointer;
+    border: var(--black) 1px solid;
+    width: 215px;
+    height: 64px;
+    background-color: transparent;
+}
+
+main .buy .quantity{
+    border: var(--grey) 1px solid;
+    width: 125px;
+    height: 64px;
+    margin: 15px;
+    border-radius: 10px;
+    border: var(--grey) solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main .buy .quantity button{
+    background-color: transparent;
+    cursor: pointer;
+}
+main li{
+    padding-inline: 7px;
+}
+
+main .quantity {
+    margin: 10px 0;
+    width: 75%;
+    margin: 10px auto;
+} 
+main table {
+    color: var(--grey);
+    font-size: 16px;
+    width: 85%; 
+    padding: 15px; 
+    text-align: left; 
+    /*table-layout: fixed;*/
+}
+main table i {
+    color: var(--black);
+}
+main .fa-regular.fa-heart{
+    color: var(--red);
+}
+main table tr{
+    height: 40px;
+}
+
+
+/* Partie description des articles*/
+
+.description {
+    background-color: var(--white);
+    color: var(--grey);
+}
+.description .options-desc {
+    display: flex;
+    justify-content: center;
+}
+
+.description .options-desc li{
+    margin: 30px;
+}
+.description .infos p{
+    margin-inline: 100px;
+    font-size: 16px;
+}
+.description .article{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    
+}
+.description .article div{
+    width: 575px;
+    height: 350px;
+    background-color: var(--light-light-pink);
+}
+.description img{
+    width: 75%;
+}
+
+/*Partie article en liaison*/
+
+.related{
+    font-size: 16px;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}
+.related h1{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin: 60px;
+}
+.related .list-articles, .list-comments{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px; 
+}
+.related .list-articles img{
+    width: 100%;
+    height: 40%;
+}
+.related .list-articles div{
+    width: 290px;
+    height: 400px;
+    display: inline-block;
+    margin-inline: 2%;
+}
+.related .list-comments div{
+    width: 290px;
+    height: 50%;
+    display: inline-block;
+    margin-inline: 2%;
+}
+.related .list-comments div h1{
+    color: var(--grey);
+}
+.related .list-comments div p{
+    color: var(--black);
+}
+.related .list-comments{
+    background-color: var(--light-pink);
+}
+.related .price{
+    font-size: 24px ;
+    color: var(--black);
+}
+
+.related hr{
+    width: 15%;
+    margin: 10px auto;
+    border: 1px solid var(--black);
+}
+
+
+.other{
+    display: flex;
+    width: 100%;
+    height: 320px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 60px auto;
+}
+.other .about-us{
+    padding: 15px;
+    width: 20%;
+    color: var(--grey);
+}
+.other .more{
+    width: 65%;
+    height: 312px;
+}
+.other table{
+    font-size: 16px;
+    width: 100%; 
+    text-align: left; 
+    border-collapse: separate;
+    border-spacing: 40px;
+}
+.other th, u{
+    color: var(--grey);
+}
+footer{
+    display: flex;
+    font-size: 16px;
+    border-top: var(--grey) 1px solid;
+    margin-left: 12%;
+    width: 75%;
+    height: 70px;
+    align-items: center;
+    justify-content: left;
+}
+u{
+    text-decoration: underline;
+}
+
+/*CSS For the form*/
+
+.billing-details{
+    display: flex;
+    justify-content: space-around;
+    height: 1830px;
+}
+.billing-details .form{
+    width: 40%;
+    height: 100%;
+}
+.billing-details h1{
+    font-size: 36px;
+    margin-top: 10%;
+}
+input[type="text"], input[type="password"], input[type="email"]  {
+    border: 1px solid var(--grey);
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+    height: 75px;
+    background-color: transparent;
+}
+.form, form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    height: 100%;
+}
+.input-group{
+    width: 100%;
+}
+.input-group div{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+    margin: 15px;
+}
+.input-group-1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
+}
+label{
+    font-size: 16;
+}
+
+
+/*CSS pour la partie facture*/
+
+.billing-details .place-order{
+    padding-top: 7%;
+    width: 40%;
+    height: 789px;
+}
+.payment table{
+    width: 100%;
+}
+.payment th, .payment td{
+    padding: 10px;
+    height: 45px;
+}
+.payment th{
+    font-size: 24px;
+}
+.payment table colgroup col:first-child {
+    text-align: right;
+}
+.payment table colgroup col {
+    text-align: left;
+}
+.info-payment span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: var(--grey);
+    font-size: 16px;
+}
+input[type="radio"] {
+    padding: 0.3rem 0.5rem;
+    border: 1px dashed #ccc;
+    width: 14px;
+    height: 14px;
+}
+input[type="radio"] +label{
+    padding: 15px;
+    width: 100%;
+}
+.info-payment button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 0px;
+    cursor: pointer;
+    border: var(--black) 1px solid;
+    width: 318px;
+    font-size: 20px;
+    height: 64px;
+    background-color: transparent;
+}
+.payment h2{
+    font-size: 24px;
+    color: var(--brown-yellow);
+    text-align: right;
+}
+.info-payment .btn{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.unactive{
+    color: var(--grey);
+}
+
+
+  

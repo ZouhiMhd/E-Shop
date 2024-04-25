@@ -1,0 +1,33 @@
+#error-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5rem;
+    font-size: larger;
+}
+
+#error-page h1 {
+    margin-bottom: 60px;
+}
+
+#error-page p {
+    margin: 10px 0;
+}
+
+#error-page .safe-return {
+    background: #0a68ed;
+    padding: 20px 60px;
+    line-height: 1.5rem;
+    color: #eaeaea;
+    border: 1px solid rgba(10, 88, 202, 0.91);
+    border-radius: 12px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#error-page .safe-return:hover {
+    background: rgb(10, 88, 202);
+    color: white;
+}
