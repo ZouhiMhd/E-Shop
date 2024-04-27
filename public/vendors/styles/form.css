@@ -240,69 +240,15 @@ main .presentation-desc .stars li p{
     color: var(--grey);
 }
 
-main .presentation-desc .sizes li {
-    font-size: 13px;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    margin-right: 16px;
-}
-main .presentation-desc .sizes button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin-left: 0px;
-    cursor: pointer;
-    border: var(--black) 1px solid;
-    width: 30px;
-    height: 30px;
-}
-
-main .presentation-desc .first-size {
-    background-color: var(--special-pink);
-}
-main .presentation-desc ul .second-size {
-    background-color: var(--light-pink);
-}
-main .presentation-desc ul .third-size {
-    background-color: var(--light-pink);
-}
-
 main .caracteristics{
     display: inline-block;
     align-items: center;
-}
-main .color button {
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    padding: 7px 15px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-main .color .cercle-1 {
-    background-color: var(--blu);
-}
-main .color .cercle-2 {
-    background-color: var(--black);
-}
-main .color .cercle-3 {
-    background-color: var(--strange-grey);
 }
 
 main .buy {
     display: flex;
     justify-content: left;
     align-items: center;
-}
-
-main button .buy .add{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
 }
 
 main .buy .add button{
@@ -320,7 +266,7 @@ main .buy .add button{
 
 main .buy .quantity{
     border: var(--grey) 1px solid;
-    width: 125px;
+    width: 155px;
     height: 64px;
     margin: 15px;
     border-radius: 10px;
@@ -337,11 +283,6 @@ main li{
     padding-inline: 7px;
 }
 
-main .quantity {
-    margin: 10px 0;
-    width: 75%;
-    margin: 10px auto;
-} 
 main table {
     color: var(--grey);
     font-size: 16px;

@@ -32,19 +32,19 @@ export const NavBar = () => {
             <div className="option">
                 <ul>
                     <li>
-                        <NavLink to="/compte">
-                            <button className="fa fa-user"></button>
-                        </NavLink>
-                    </li>
-                    <li>
                         {/* <NavLink to="/"> */}
                             <button className="fa fa-search"></button>
                         {/* </NavLink> */}
                     </li>
                     <li>
-                        {/* <NavLink to="/"> */}
+                        <NavLink to="/compte">
+                            <button className="fa fa-user"></button>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/singleprod"> 
                             <button className="fa fa-heart"></button>
-                        {/* </NavLink> */}
+                        </NavLink>
                     </li>
                     <li>
                         <NavLink to="/Checkout"> 
