@@ -1,0 +1,300 @@
+.shop-content1{
+    height: 316px;
+    background-blend-mode: overlay; 
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+} 
+.shop-content1 .fi {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.shop-dropdown-menu {
+    margin-left:10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+    padding: 8px 12px;
+    border: 0px solid black;
+    border-radius: 4px;
+    background-color:#fff;
+    color: black;
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1.5em 1.5em;
+    padding-right: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+.shop-dropdown-menu:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.article-manager {
+    background-color:#fff;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+}
+.article-manager .align {
+    background-color: #FAF4F4;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.article-manager .align .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    height: 100px;
+}
+.article-manager .align .left hr {
+    height: 30px;
+    width: 0px;
+    border: 1px solid #9F9F9F; 
+}
+.article-manager .align .Drop {
+    width: 20%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+.article-manager .article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 40px;
+    height: auto;
+    grid-gap: 1rem;
+    background-color: white;
+    width: 100%;
+    
+}  
+.article-manager .pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+  
+.article-manager .page-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #FFF9E5;  
+    border: 2px solid white;
+    border-radius: 20%;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color: black;
+  }
+  
+.article-manager .page-button.active {
+    background-color:#FBEBB5;
+    color: black;
+    
+}
+
+
+
+.article-manager .page-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.article-manager .articles .article-card {
+    background-color:white;
+    border-radius: 8px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 245px;
+    max-height: 291px;
+}  
+.article-manager .articles .article-card .article-photo {
+    height: 500px;
+    overflow: hidden;
+}
+  
+.article-manager .articles .article-card .article-photo img {
+   width: 70%;
+}
+  
+.article-manager .articles .article-card .article-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+  
+.article-manager .articles .article-card .article-price {
+    font-size: 16px;
+    color: #333;
+    margin: 0 20px 20px;
+}
+
+.article-manager .articles .article-card .article-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    
+}
+.article-manager .articles .article-icons :hover {
+    cursor: pointer;
+}
+.article-manager .articles button:hover {
+    background-color: rgba(224, 224, 224, 0.1);
+    cursor: pointer;
+}
+
+.Shop-content4 {
+    background:#FAF4F4 ;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.Shop-content4 .text3 {
+    margin-right: 200px;
+}
+.Cart-content2 {
+    background-color:#FFFFFF;
+    height: 525px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 100px;
+
+}
+.Cart-content2 .first {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    margin-right: 20px;
+}
+.Cart-content2 .first .first1 {
+    background-color: #FFF9E5;
+    width: 750px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.Cart-content2 .first .first2 img {
+    width: 20%;
+    background-color:#FFF9E5 ;
+}
+.Cart-content2 .first .first2 {
+    display: grid;
+    flex-direction: column;
+    height: 3000px;   
+    gap: 5px;
+    margin-top: 10px;
+    margin-right: 90px;
+    overflow-y: auto;
+    scrollbar-color: grey white; /* Couleur du curseur et de la piste */
+    scrollbar-width: 5px;/* Largeur de la barre de défilement */
+} 
+/* Style pour les navigateurs utilisant WebKit, comme Chrome, Safari */
+.Cart-content2 .first .first2::-webkit-scrollbar {
+width: 12px; /* Largeur de la barre de défilement */
+} 
+.Cart-content2 .first .first2::-webkit-scrollbar-track {
+background: grey; /* Couleur de la piste */
+}
+
+.Cart-content2 .first .first2::-webkit-scrollbar-thumb {
+background-color: black; /* Couleur du curseur */
+border-radius: 6px; /* Arrondi du curseur */
+border: 3px solid white /* Bordure et espace entre le curseur et la piste */
+}
+
+.Cart-content2 .first .first2 .cart-articles {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Cart-content2 .first .first2 .first21 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+ }
+.Cart-content2 .first .first2 .first21 p {
+    color: gray;
+}
+.Cart-content2 .first .first2 .price {
+    color: gray;
+    margin-left: 100px;
+}
+.Cart-content2 .first .first2 .one {
+    background-color: #FFFFFF;
+    margin-left: 119px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 20%; 
+}
+.Cart-content2 .first .first2 .sub {
+    margin-left: 150px;
+}
+.but {
+    background-color:#FFFFFF;
+    border: 0px ;
+}
+
+.Cart-content2 .second {
+    background-color:#FFF9E5 ;
+    width: 30%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}    
+.Cart-content2 .second h1 {
+    margin-bottom: 30px;
+}
+.Cart-content2 .second .second1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+  
+}
+.Cart-content2 .second .second2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    height: 50px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.Cart-content2 .second .second2 p {
+    color: #B88E2F;
+    font-size: 20px;
+}
+.Cart-content2 .second .check {
+    background-color: #FFF9E5;
+    height: 58.95px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    border: 1px solid;
+    width: 100px;
+
+}
+

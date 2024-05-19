@@ -40,7 +40,6 @@ body
 	font-family: "Tempus Sans ITC";
     font-size: 13px;
     color: #1a1111;
-    background-color: var(--white);
 	}
 hr{
     border: 1px solid var(--grey);
@@ -63,20 +62,20 @@ li{
     color: var(--black);
 }
 
-h1, h2,h3{
-    text-align: left;
+main h1, h2,h3{
+
     padding-left: 0px;
 }
-h1  {
+main h1  {
     font-size: 42px;
     padding-bottom: 15px;
 }
-h2{
+main h2{
     font-size: 24;
     color: var(--grey);
     padding-bottom: 10px;
 }
-h3{
+main h3{
     font-size: 14px;
     padding: 10px;
     color: var(--grey);
@@ -87,32 +86,34 @@ header{
     height: 100%;
 }
 header .menu-haut, header .menu-haut-home{
+    
     display: flex;
-    background-color: var(--white);
     height: 90px;
 }
-header .menu-haut-home{
-    background-color: var(--special-pink);
-}
+
 header ul  li{
+    
     display: inline-block;
     padding: 15px;
     height: 100%;
 }
 
 header .menu {
-    width: 70%; 
+    
+    width: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 header .option{
-    width: 30%;
+    
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 header .menu-second{
+    
     height: 100px;
     padding-left: 50px;
     display: flex;
@@ -167,10 +168,11 @@ filter: drop-shadow(0px 28px 30px rgba(0, 0, 0, 0.1));
 transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 .affiche{
-    
+    object-fit: cover;
     height: 316px;
 }
 main .presentation-check{
+    object-fit: cover;
     display: flex;
     justify-content: center;
     height: 100%;
@@ -199,26 +201,20 @@ main .presentation .presentation-product .auxilary div{
     margin-bottom: 20px;
 }
 main .presentation .presentation-product .principal{
-    background-color: var(--light-light-pink);
     margin-left: 10px;
     margin-right: 10px;
 }
-main .presentation .auxilary{
-    display: block;
-    justify-content:space-around;
-    align-items: center;
-    width: 76px;
-}
+
 main .presentation .principal{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 423px;
+    width: 100%;
 }
-main img{
+/* main img{
     width:100%;
     height:100%;
-}
+} */
 main .presentation-product{
     display: flex;
     justify-content: center;
@@ -311,30 +307,34 @@ main table tr{
 .description .options-desc {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .description .options-desc li{
     margin: 30px;
+    
 }
-.description .infos p{
-    margin-inline: 100px;
-    font-size: 16px;
+
+.description .infos {
+    height: 100px;
 }
+
 .description .article{
     display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
+    justify-content: space-around;
     margin-left: 25px;
     margin-right: 25px;
+    margin-top: 90px;
     
 }
 .description .article div{
-    width: 575px;
-    height: 350px;
-    background-color: var(--light-light-pink);
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
 }
-.description img{
-    width: 75%;
+.description p{
+    display: flex;
+    flex-direction: column;
 }
 
 /*Partie article en liaison*/
@@ -351,19 +351,29 @@ main table tr{
     font-size: 24px;
     margin: 60px;
 }
-.related .list-articles, .list-comments{
+.related .list-articles{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 400px; 
+    margin-top: 200px;
+    margin-bottom: 300px;
+    height: 500px; 
+}
+.list-comments{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px; 
 }
 .related .list-articles img{
-    width: 100%;
-    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: "auto";
+    height: 200px;
 }
 .related .list-articles div{
-    width: 290px;
-    height: 400px;
+    width: 100%;
     display: inline-block;
     margin-inline: 2%;
 }
@@ -450,7 +460,7 @@ u{
     font-size: 36px;
     margin-top: 10%;
 }
-input[type="text"], input[type="password"], input[type="email"]  {
+input[type="text"], input[type="password"], input[type="email"],input[type="submit"]   {
     border: 1px solid var(--grey);
     padding: 10px;
     border-radius: 10px;
@@ -458,10 +468,18 @@ input[type="text"], input[type="password"], input[type="email"]  {
     height: 75px;
     background-color: transparent;
 }
+.submit{
+    width: 300px;
+    padding: 20px;
+    left: 0px;
+}
+.submit input[type="submit"]{
+    cursor: pointer;
+}
 .form, form{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: space-around;
     width: 90%;
     height: 100%;
@@ -558,5 +576,159 @@ input[type="radio"] +label{
     color: var(--grey);
 }
 
+/* Pour l'indice sur le panier */
+
+.notification {
+    position: relative;
+}
+
+.num {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--light);
+    background: var(--brown-yellow);
+    color: white;
+    font-weight: 700 ;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
 
   
+/* CSS de la partie des enregistrement*/
+.register{
+	width: 100%;
+	margin:20px auto 20px;
+	min-height: 100vh;
+	background: #ffffff;
+	font-size:12px;
+	max-width:500px;
+	padding: 40px 10px 70px;
+}
+.reg-submit {
+    display: flex;
+    margin-left: 15px;
+    flex-direction: row;
+    margin-bottom: 20px;
+   
+}
+
+.enregistrer{
+	border: 1px solid;
+	border-color: #000000;
+	outline: none;
+	padding: 15px 30px;
+	background: #ffffff;
+	color: #000000;
+	font-size: 12px;
+	cursor: pointer;
+	border-radius: 10px;
+	margin-right: 10px;
+    justify-content: left;
+	width: 30%;	
+}
+
+.reg-link{
+    width:26%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkbox{
+    left: 0;
+	width: 30px;
+	margin:20px ;
+    margin-left: 0;
+}
+
+.checkbox1{
+	align-items:center;
+	display: flex;
+}
+
+/*CSS de la page Contact US*/
+.desc {
+	padding: 50px 100px;
+}
+
+.desc h3{
+    text-align:center;
+    margin-top:30px;
+    color:#000000;
+}
+.desc p{
+	text-align:center;
+	color:#9f9f9f;
+	opacity: 50%;
+}
+
+.info img{
+	float: left;
+	width: 20px;
+	margin:0 5px 50px 0px;
+}
+.formulaire{
+	display:flex;
+	justify-content:space-between;
+	font-size: 12px;
+	width:100%;
+    padding-left: 20%;
+    margin-bottom: 50px;
+	
+}
+.formulaire h3{
+	margin-top:30px;
+    color:#000000;
+}
+.infos{
+	width: 100%;
+	min-height: 150px;
+	background: #ffffff;
+	padding:0px 130px;
+	font-size:12px;
+}
+.info{
+	width: 200px;
+	justify-content:left;
+}
+
+.message{
+	height:150px;
+    width:90%;
+	padding-top:5px;
+	padding-bottom: 10px;
+    border: #9f9f9f 1px solid;
+    border-radius: 10px;
+}
+
+header button{
+    background-color: transparent;
+}
+
+.titre-about{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    background: linear-gradient(to bottom, white, var(--special-pink));
+ 
+}
+.text-about{
+    width: 100%;
+    font-size:20px;
+    background: linear-gradient(to bottom,var(--special-pink), white);
+    color: var(--black);
+    padding: 60px;
+ 
+}
+.text-about ul li{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}

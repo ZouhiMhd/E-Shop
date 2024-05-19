@@ -89,6 +89,24 @@ export const FieldEmail = ({name, children})=>{
     )
 }
 
+export const FieldSubmit = ({value})=>{
+
+  return (
+      
+    <div className='submit'>
+      <div>
+        <input 
+          type='submit' 
+          value={value} 
+          // onChange={handleChange}
+          />
+      </div>
+      {/* {JSON.stringify({value})} */}
+    </div>
+    )
+}
+
+
 export const RadioBox = ({name, children})=>{
   
   const [value, setValue] = useState('');
@@ -110,8 +128,37 @@ export const RadioBox = ({name, children})=>{
         className='input'
       />
       <label htmlFor={name} >{children}</label>  
-       {JSON.stringify({value})}
+       {/* {JSON.stringify({value})} */}
     </span>)
+}
+export const MessageBox = ({name, children, text})=>{
+  
+  const [value, setValue] = useState('');
+
+  const handleChange = function (e) {
+    setValue(e.target.value);
+  };
+  
+  return (
+      
+    <div className='input-group'>
+      <div>
+        <label htmlFor={name}>{children}</label>
+      </div>
+      <div>
+        <input 
+          type='message-box' 
+          value={value} 
+          placeholder={text} 
+          onChange={handleChange } 
+          id={name} 
+          name={name} 
+          className='message'
+          />
+      </div>
+      {/* {JSON.stringify({value})} */}
+    </div>
+    )
 }
 
 

@@ -1,24 +1,31 @@
 import {lazy, Suspense} from 'react';
-import {
-	createBrowserRouter,
-	RouterProvider,
-} from 'react-router-dom';
+import {createBrowserRouter,RouterProvider} from 'react-router-dom';
 import {Layout} from './Layout.jsx';
 import {ErrorPage} from './error-page'
+import Auth from "../context/Auth.js";
+import { useContext } from 'react';
 
-const AuthUI = lazy(() => import('../pages/auth/auth.ui'));
 const HomeUI = lazy(() => import('../pages/home/home.ui'));
 const CheckoutUI = lazy(() => import('../pages/checkout/checkout.ui'));
 const SinglgeProductUI = lazy(() => import('../pages/singleprod/singleprod.ui'));
 const CartUI = lazy(() => import('../pages/cart/cart.ui'));
 const ShopUI = lazy(() => import('../pages/shop/shop.ui'));
+const FavorisUI = lazy(() => import('../pages/favoris/favoris.ui'));
 const ContactUI = lazy(() => import('../pages/contact/contact.ui'));
-const RegisterUI = lazy(() => import('../pages/register/register.ui'));
-const LoginUI = lazy(() => import('../pages/login/login.ui'));
-const CompteUI = lazy(() => import('../pages/compte/compte.ui'));
+let RegisterUI = lazy(() => import('../pages/register/register.ui'));
+let LoginUI = lazy(() => import('../pages/login/login.ui'));
+let CompteUI = lazy(() => import('../pages/compte/compte.ui'));
 const AboutUI = lazy(() => import('../pages/about/about.ui'));
 
 export default function AppRouter() {
+	const {isAuthenticated} = useContext(Auth);
+
+	if(isAuthenticated){
+		RegisterUI = CompteUI;
+	}
+	else{
+		CompteUI = RegisterUI;
+	}
 	const router = createBrowserRouter([
 		{
 			path: '/',
@@ -26,7 +33,7 @@ export default function AppRouter() {
 			element: <Layout/>,
 			children: [
 				{
-					path: 'home',
+					path: '',
 					index: true,
 					element: <HomeUI/>
 				},
@@ -55,6 +62,10 @@ export default function AppRouter() {
 					element: <ShopUI/>,
 				},
 				{
+					path: 'favoris',
+					element: <FavorisUI/>,
+				},
+				{
 					path: 'contact',
 					element: <ContactUI/>,
 				},
@@ -68,13 +79,9 @@ export default function AppRouter() {
 				}
 
 			],
-		},
-		{
-			path: 'auth',
-			element: <AuthUI/>,
-		},
-
+		}
 	])
+
 	return <Suspense>
 		<RouterProvider router={router}/>
 	</Suspense>

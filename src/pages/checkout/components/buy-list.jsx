@@ -11,7 +11,7 @@ export const BuyList =({name, price, qte, subtotal, total}) =>{
             </thead>
             <tbody>
                 <tr>
-                    <td style={{textAlign : "left"}}><i className="unactive">{name}</i>x {qte}</td>
+                    <td style={{textAlign : "left"}}><i className="unactive">{name}</i> x {qte}</td>
                     <td style={{textAlign : "right"}}>{price}</td>
                 </tr>
                 <tr>

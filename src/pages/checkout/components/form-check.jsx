@@ -1,7 +1,7 @@
 import { FieldText } from "../../../components/fields"  
 import { FieldEmail } from "../../../components/fields"
 import { FieldPassword } from "../../../components/fields"
-// import { FieldSubmit } from "../../../components/fields"
+import { FieldSubmit } from "../../../components/fields"
 
 export const FormCheckUI = () => {
    
@@ -23,8 +23,8 @@ export const FormCheckUI = () => {
                     <FieldText name="phone">Phone</FieldText>
                     <FieldEmail name="email">Email address</FieldEmail>
                     <FieldText name="info"  text="Additionnal information"></FieldText>
-                    {/* <FieldSubmit name="Envoyer"  text="Valider">Valider</FieldSubmit>
-           */}
+                    <FieldSubmit value="Continuer"/>
+           
             </form> 
         </div>
     )

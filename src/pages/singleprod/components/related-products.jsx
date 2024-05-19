@@ -1,4 +1,5 @@
 import { Article } from "./article"
+import PropTypes from 'prop-types';
 
 export const RelatedProduct =({article1,article2,article3,article4}) =>{
     return (
@@ -20,3 +21,9 @@ export const RelatedProduct =({article1,article2,article3,article4}) =>{
     </section>
     )
 }
+RelatedProduct.propTypes = {
+    article1: PropTypes.object.isRequired,
+    article2: PropTypes.object.isRequired,
+    article3: PropTypes.object.isRequired,
+    article4: PropTypes.object.isRequired,
+  };

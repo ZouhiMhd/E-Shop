@@ -6,7 +6,7 @@ export const Decor = ({title, imgfond, imglogo}) => {
                 <img 
                     src={imgfond}
                     alt="image-floutée" 
-                    style={{opacity : '0.3'}}/>  
+                    style={{opacity : '0.3', width : "100%", height : 'auto'}}/>  
                 <div className="superposed-word">
                     
                     <div>

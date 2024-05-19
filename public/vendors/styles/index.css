@@ -13,22 +13,16 @@
     height: 100vh;
     background-color: #e38d14;
 }
-.popup .btn{
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    font-size: 22px;
-    background-color: #fff;
-    border-radius: 30px;
-}
+
+
 .fa.fa-shopping-cart{
     cursor: pointer;
     background-color: transparent;
 }
 .popup {
-    width: 415px;
-    height: 75%;
-    background-color: rgb(254, 207, 105);
+    width: 450px;
+    height:75%;
+    background-color:#f7e4a5;
     border-radius: 6px;
     position: absolute;
     top: 0;
@@ -42,13 +36,13 @@
     transition: transform 0.4s, top 0.4s;
     opacity: 1;
     z-index: 1;
-    color: white;
 }
 .open-popup{
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
 }
+
 .shadow
 {
     opacity: 0.5;
@@ -60,7 +54,7 @@
     box-shadow: 0 2px 5px rgba(0, 0,0,0.2);
 }
 .popup .bilan-article{
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-left: 25px;
@@ -70,11 +64,14 @@
     display: flex;
     flex-direction: row;
     margin: 10px;
+    
+    
 }
 .popup .one-article div{
     width: 170px;
     display: flex;
     align-items: center;
+    
 }
 
 .popup .bilan-article .quantity-article{
@@ -82,11 +79,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    ;
 }
 .popup .bilan-article img{
     width: 75%;
+    
+    height: 100px;
     border-radius: 25%;
     margin-top: 0%;
     box-shadow: 0 2px 5px rgba(0, 0,0,0.2);
@@ -101,15 +98,24 @@
 .popup button{
     width: 90%;
     padding: 10px 0;
-    background:gray;
-    color: #fff;
+    background:rgb(255, 255, 255);
     border: 0;
     outline: none;
+    color: rgb(0, 0, 0);
     font-size: 12px;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0,0,0.2);
 }
+.popup .btn-no{
+    outline: 0;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 30px;
+    width: 60px;
+    height: 50px;
+}
+
 .popup i{
     left: 0%;
     width: 18px;
@@ -120,13 +126,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
 }
 .popup .total{
+    width: 90%;
    margin-top: 35%;
-   height: 40px;
    font-size: 16px;
+   position: absolute;
+   bottom: 60px;
+   
 }
 .popup .total ul, .popup .next{
     display: flex;
@@ -134,11 +142,14 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    position: absolute;
+    bottom: 0px;
 }
 .popup .next button{
     margin: 5%;
     margin-top: 1%;
 }
 .sum {
-    color: goldenrod;
+    color: #B88E2F;
+    font-size: 15px;
 }

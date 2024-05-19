@@ -1,9 +1,12 @@
+import PropTypes from 'prop-types';
+
+
 export const Description = ({article1, article2}) =>{
     return(
     <section className="description">
         <div className="options-desc">
             <ul>
-                <li><a href="#"><h2  className="active">Desciption</h2></a></li>
+                <li><a href="#"><h2  className="active">Description</h2></a></li>
                 <li><a href="#"><h2>Additionnal information</h2></a></li>
                 <li><a href="#"><h2>Reviews [5]</h2></a></li>
             </ul>
@@ -15,13 +18,22 @@ export const Description = ({article1, article2}) =>{
         </div>
         <div className="article">
             <div>
-                {article1.map(e=> <img src={e.img}/>)}     
+            {article1.map((e, index) => ( <img  key={index} src={e.img}/>
+                // eslint-disable-next-line react/no-array-index-key
+            ))}     
             </div>
             <div>
-                {article2.map(e=> <img src={e.img}/>)}     
+            {article2.map((e, index) => ( <img  key={index} src={e.img}/>
+                // eslint-disable-next-line react/no-array-index-key
+            ))}      
             </div>
             
         </div>
     </section>
 )
 }
+
+Description.propTypes = {
+    article1: PropTypes.object.isRequired,
+    article2: PropTypes.object.isRequired
+  };

@@ -13,7 +13,7 @@ export default function CheckoutUI() {
 	}]
     const total="250,000.00"
 
-    return(<>  
+    return(<div id="conteneur">  
     <Decor title="Checkout" imgfond="../../../public/vendors/images/image1.jpg" imglogo="../../../public/vendors/images/sauver.png"/>
     <section className="billing-details">
         <FormCheckUI/>
@@ -31,5 +31,5 @@ export default function CheckoutUI() {
         </div>
     </section>
     <MoreInfo/>
-    </>)
+    </div>)
 }

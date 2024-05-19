@@ -1,14 +1,22 @@
 import {NavLink} from "react-router-dom";
+import { openPopup } from "../../public/vendors/scripts/script";
+import { SearchBar } from "./searchbar";
+import { useContext } from "react";
+import Auth from "../context/Auth";
+import { CartContext } from "../pages/shop/components/CartContext"
 
 export const NavBar = () => {
-	return (
+    const {isAuthenticated} = useContext(Auth);
+    const { cart, ajouterDansPanier} = useContext(CartContext)
+    const count = cart.length;
+     return (
         <>
 		<header>
         <div className="menu-haut">
             <div className="menu">
                 <ul>
                     <li>
-                        <NavLink to="/home">
+                        <NavLink to="/">
                             Home
                         </NavLink>
                     </li>
@@ -29,28 +37,49 @@ export const NavBar = () => {
                     </li>
                 </ul>
             </div>
-            <div className="option">
+            <div className="option" >
                 <ul>
                     <li>
-                        {/* <NavLink to="/"> */}
-                            <button className="fa fa-search"></button>
-                        {/* </NavLink> */}
+                    <SearchBar/>
                     </li>
+                    {(!isAuthenticated && (
+                        <>
                     <li>
-                        <NavLink to="/compte">
+                        <NavLink to="/register">
                             <button className="fa fa-user"></button>
                         </NavLink>
                     </li>
+                    </>))||(
+                    <>
                     <li>
-                        <NavLink to="/singleprod"> 
+                    
+                    <NavLink to="/compte"> 
+                        <button style={
+                            {
+                                width : "30px",
+                                height : "30px",
+                                borderRadius: "50%",
+                                backgroundColor : "gold",
+                                display : "flex",
+                                alignItems : "center",
+                                justifyContent :"center",
+                            }}>
+                                NP
+                            
+                        </button>
+                        </NavLink>
+                    </li></> 
+                    )}
+                     <li>
+                        <NavLink to="/favoris"> 
                             <button className="fa fa-heart"></button>
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/Checkout"> 
-                            <button className="fa fa-shopping-cart" type="button"></button>
-                        </NavLink> 
+                    <li className="notification">
+                        <button className="fa fa-shopping-cart" type="button" onClick={openPopup} style={{position : "relative"}}></button>
+                        <span className="num">{count}</span>
                     </li>
+                    
                 </ul>
             </div>
         </div>    
