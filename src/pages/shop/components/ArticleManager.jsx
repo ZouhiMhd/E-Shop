@@ -3,7 +3,8 @@ import '../../../../public/publicNath/styles/global2.css';
 import FilterSection from './FilterSection';
 import ArticleList from './ArticleList';
 import Pagination from './Pagination';
-import { tousArticles } from "../../../../public/datas/ArticleList"
+import { autreArticles} from "../../../../public/datas/ArticleList"
+import {axiosInstance} from "../../../axios.js"
 
 const ArticleManager = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -12,16 +13,37 @@ const ArticleManager = () => {
     const articlesPerPage = 16;
     const [totalPages, setTotalPages] = useState(0);
     const [numbArticles, setNumArticles] = useState(0);
+	
+	// useEffect(() => {
+	//   axiosInstance.get("/produit")
+	// 		.then(function (response) {
+	// 			if (response.status ===200) {
+	// 				console.log(response.data[0].categorie.nomCat)
+	// 			}
+				
+	// 		})
+	// 		.catch(function (error) {
+	// 			// en cas d’échec de la requête
+	// 			console.log(error);
+	// 		  })
+	// }, [])
     
     useEffect(() => {
         fetchArticles();
     }, [selectedCategory, currentPage]);
 
     const fetchArticles = () => {
-        const allArticles = tousArticles
+
+        axiosInstance.get("/produit")
+			.then(function (response) {
+				if (response.status ===200) {
+					console.log(response.data[0].categorie.nomCat)
+
+
+        const allArticles = response.data
         const filteredArticles = selectedCategory === 'All'
             ? allArticles
-            : allArticles.filter(article => article.categorie === selectedCategory);
+            : allArticles.filter(article => article.categorie.nomCat === selectedCategory);
                             
         const totalArticles = filteredArticles.length;
         setNumArticles(totalArticles);
@@ -33,6 +55,28 @@ const ArticleManager = () => {
         const endIndex = Math.min(startIndex + articlesPerPage, totalArticles);
 
         setArticles(filteredArticles.slice(startIndex, endIndex));
+				}			
+			})
+			.catch(function (error) {
+				// en cas d’échec de la requête
+				console.log(error);
+			  })
+
+        // const allArticles = tousArticles
+        // const filteredArticles = selectedCategory === 'All'
+        //     ? allArticles
+        //     : allArticles.filter(article => article.categorie === selectedCategory);
+                            
+        // const totalArticles = filteredArticles.length;
+        // setNumArticles(totalArticles);
+                    
+        // const totalPagesCount = Math.ceil(totalArticles / articlesPerPage);
+        // setTotalPages(totalPagesCount);
+
+        // const startIndex = (currentPage - 1) * articlesPerPage;
+        // const endIndex = Math.min(startIndex + articlesPerPage, totalArticles);
+
+        // setArticles(filteredArticles.slice(startIndex, endIndex));
     };
 
     const handleCategoryChange = (category) => {
@@ -51,7 +95,8 @@ const ArticleManager = () => {
                 selectedCategory={selectedCategory}
                 onCategoryChange={handleCategoryChange}
             />
-            <ArticleList articles={articles} />
+            {/* <ArticleList articles={articles} /> */}
+            <ArticleList articles={autreArticles} />
             <Pagination
                 totalPages={totalPages}
                 currentPage={currentPage}
@@ -64,25 +109,4 @@ const ArticleManager = () => {
 export default ArticleManager;
 
 
-//Lorsqu'il faudra se connecter via une API
-
-// const fetchArticles = async () => {
-//     try {
-//         const response = await axios.get('YOUR_API_ENDPOINT_HERE');
-//         const allArticles = response.data; // Assuming your API returns an array of articles
-//         const filteredArticles = selectedCategory === 'All'
-//             ? allArticles
-//             : allArticles.filter(article => article.category === selectedCategory);
-//         const totalArticles = filteredArticles.length;
-//         setNumArticles(totalArticles);
-//         const totalPagesCount = Math.ceil(totalArticles / articlesPerPage);
-//         setTotalPages(totalPagesCount);
-//         const startIndex = (currentPage - 1) * articlesPerPage;
-//         const endIndex = Math.min(startIndex + articlesPerPage, totalArticles);
-//         setArticles(filteredArticles.slice(startIndex, endIndex));
-//         setError(null); // Clear any previous errors
-//     } catch (error) {
-//         console.error('Error fetching articles:', error);
-//         setError('An error occurred while fetching articles. Please try again later.');
-//     }
-//};
+;

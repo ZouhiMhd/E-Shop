@@ -8,6 +8,7 @@ import { CartContext } from "./CartContext";
 export const CookiesProvider = ({children}) => {
     const [cookies, setCookie] = useCookies(['tableau'])
     const [cart, setCart] = useState([])
+    const [hasAuthenticated , setHasAuthenticated] = useState(false)
 
     //Mettre à jour le tableau d'articles
     const ajouterDansPanier = (article) => {
@@ -15,9 +16,15 @@ export const CookiesProvider = ({children}) => {
         setCart(newCart)
         setCookie('tableau', newCart, {path:'/'})
     }
+    //Mettre à jour le tableau d'articles
+    const supprimerDansPanier = (article) => {
+        const newCart = cart.filter(item => item.codePro !== article.codePro )
+        setCart(newCart)
+        setCookie('tableau', newCart, {path:'/'})
+    }
 
     return (
-        <CartContext.Provider value={{cart, ajouterDansPanier}}>
+        <CartContext.Provider value={{cart, ajouterDansPanier, supprimerDansPanier, hasAuthenticated, setHasAuthenticated}}>
             {children}
         </CartContext.Provider>
     )

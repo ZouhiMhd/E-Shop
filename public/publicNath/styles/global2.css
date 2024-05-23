@@ -247,6 +247,7 @@ border: 3px solid white /* Bordure et espace entre le curseur et la piste */
     height: 30px;
     border: 1px solid gray;
     border-radius: 20%; 
+    cursor: pointer;
 }
 .Cart-content2 .first .first2 .sub {
     margin-left: 150px;

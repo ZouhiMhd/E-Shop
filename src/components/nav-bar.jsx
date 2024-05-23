@@ -2,19 +2,18 @@ import {NavLink} from "react-router-dom";
 import { openPopup } from "../../public/vendors/scripts/script";
 import { SearchBar } from "./searchbar";
 import { useContext } from "react";
-import Auth from "../context/Auth";
 import { CartContext } from "../pages/shop/components/CartContext"
 
 export const NavBar = () => {
-    const {isAuthenticated} = useContext(Auth);
-    const { cart, ajouterDansPanier} = useContext(CartContext)
+    const { cart, ajouterDansPanier, hasAuthenticated, setHasAuthenticated} = useContext(CartContext)
     const count = cart.length;
+
      return (
         <>
-		<header>
-        <div className="menu-haut">
+		<header  >
+        <div className="menu-haut"  >
             <div className="menu">
-                <ul>
+                <ul >
                     <li>
                         <NavLink to="/">
                             Home
@@ -35,14 +34,10 @@ export const NavBar = () => {
                             Contact
                         </NavLink>
                     </li>
-                </ul>
-            </div>
-            <div className="option" >
-                <ul>
                     <li>
                     <SearchBar/>
                     </li>
-                    {(!isAuthenticated && (
+                    {(!hasAuthenticated && (
                         <>
                     <li>
                         <NavLink to="/register">

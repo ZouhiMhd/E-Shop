@@ -5,19 +5,17 @@ import { CartContext } from '../../shop/components/CartContext';
 function ShoppingCartIcon({ article }) {
     const [isIncart, setIsIncart] = useState(false);
     const [isFavorited, setIsFavorited] = useState(false);
-    const { cart, ajouterDansPanier} = useContext(CartContext)
+    const { cart, ajouterDansPanier, supprimerDansPanier} = useContext(CartContext)
 
     const handleAddToCart = () => {
         setIsIncart(!isIncart);
         if (!isIncart) {
             ajouterDansPanier(article)
-            console.log('Article ajouté au panier', article.nom);
-            console.log(cart)
-            
         } else {
-            console.log('Article retiré du panier', article.nom);
+            supprimerDansPanier(article)
         }
     };
+   
 
     const handleClick = () => {
         setIsFavorited(!isFavorited);

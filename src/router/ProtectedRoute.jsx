@@ -1,7 +1,6 @@
 import {useContext} from 'react';
 import {Navigate, Outlet, useLocation} from 'react-router-dom';
 import swal from 'sweetalert';
-import {UserContext} from '../context/user-context/user-context.js';
 
 export function ProtectedRoute() {
 	const {currentUser} = useContext(UserContext);

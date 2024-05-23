@@ -4,14 +4,14 @@ export const OneInfo = ({title,children}) => {
   return (
     <span style={
         {
-          marginLeft : "300px", 
+          marginLeft : "10px", 
           marginTop : "20px",
           display:"flex", 
           justifyContent:"space-between" , 
           alignItems : "center",
           with:"50%"
           }}>
-        <span><h3> {title} </h3></span>
+        <span><p> {title} </p></span>
         <span>{children} </span>
       </span>
   )

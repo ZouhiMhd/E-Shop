@@ -5,32 +5,20 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../shop/components/CartContext";
 
 export default function Cart1 () {
-  const [quantity, setQuantity] = useState(1)
-  const { cart, setCart} = useContext(CartContext)
-  // console.log(cart)
-  // console.log(cart.length)
-
+  const { cart, ajouterDansPanier, supprimerDansPanier} = useContext(CartContext)
+  
+let quantity = 1
   function handleQuantity () {
-    setQuantity(quantity + 1 )
+    quantity = quantity + 1 
   }
 
   let total = 0;
 
   for (const onecart of cart) {
-    total = total+onecart.prix*onecart.qte;
-    // console.log(cart.prix);
+    total = total+onecart.prix*1;
   }
 
-  function supprimerArticle(articles, cle) {
-    return articles.filter((element) => element.key !== cle);
-}
-  const handleSupprimer = (cle) => {
-    const nouveauPanier = supprimerArticle(cart, cle);
-    console.log("element supprimé")
-    setCart(nouveauPanier)
-};
 
-  
     return (
         <section className="Cart-content2">
           <div className="first">
@@ -44,13 +32,13 @@ export default function Cart1 () {
             {cart.map((article)=>(
                   <div className="cart-articles">
                     <div class="first21">
-                      <img src={article.img}/>
-                      <p class="product">{article.nom}</p>
+                      <img src={article.photos[0].lienPhoto}/>
+                      <p class="product">{article.nomPro}</p>
                     </div>
-                    <p class="price">{article.prix} FCFA</p>
-                    <button class="one" style={{ cursor: 'pointer' }} onClick={handleQuantity}>{quantity}</button>
+                    <p class="price">{article.prix} fCFA</p>
+                    <button class="one"  onClick={handleQuantity}>{quantity}</button>
                     <p class="sub">{quantity*article.prix} FCFA</p>
-                    <FaRegTrashCan color="red" style={{ cursor: 'pointer' }} onClick={() => handleSupprimer(article.key)} /> 
+                    <FaRegTrashCan color="red" style={{ cursor: 'pointer' }} onClick={() => supprimerDansPanier(article)} /> 
                   </div>
                 ))}
             </div>
@@ -60,11 +48,11 @@ export default function Cart1 () {
             <h1>Cart Totals</h1>
             <div className="second1">
                 <h4>Subtotal</h4>
-                <p>Rs.{total}</p>
+                <p>{total} fCFA</p>
             </div>
             <div className="second2">
                 <h4>Total</h4>
-                <p>Rs.{total}</p>
+                <p>{total} fCFA</p>
             </div >
                 <Link to="/checkout">
                   <button className="check" style={{ cursor: 'pointer' }}>Check Out</button>

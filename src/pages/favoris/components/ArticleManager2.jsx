@@ -66,25 +66,3 @@ const ArticleManager2 = () => {
 export default ArticleManager2;
 
 
-//Lorsqu'il faudra se connecter via une API
-
-// const fetchArticles = async () => {
-//     try {
-//         const response = await axios.get('YOUR_API_ENDPOINT_HERE');
-//         const allArticles = response.data; // Assuming your API returns an array of articles
-//         const filteredArticles = selectedCategory === 'All'
-//             ? allArticles
-//             : allArticles.filter(article => article.category === selectedCategory);
-//         const totalArticles = filteredArticles.length;
-//         setNumArticles(totalArticles);
-//         const totalPagesCount = Math.ceil(totalArticles / articlesPerPage);
-//         setTotalPages(totalPagesCount);
-//         const startIndex = (currentPage - 1) * articlesPerPage;
-//         const endIndex = Math.min(startIndex + articlesPerPage, totalArticles);
-//         setArticles(filteredArticles.slice(startIndex, endIndex));
-//         setError(null); // Clear any previous errors
-//     } catch (error) {
-//         console.error('Error fetching articles:', error);
-//         setError('An error occurred while fetching articles. Please try again later.');
-//     }
-//};

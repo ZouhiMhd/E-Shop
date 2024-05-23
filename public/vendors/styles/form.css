@@ -83,31 +83,43 @@ main h3{
 /* L'entête */
 
 header{
-    height: 100%;
+    width: 100%;
+    
 }
 header .menu-haut, header .menu-haut-home{
     
     display: flex;
-    height: 90px;
+    height: 60px;
 }
-
+header .menu-haut{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+}
 header ul  li{
     
     display: inline-block;
-    padding: 15px;
+    /* padding-inline: 20px; */
+    height: 100%;
+}
+header ul  li{
+    
+    display: inline-block;
+    padding-inline: 25px;
     height: 100%;
 }
 
 header .menu {
     
-    width: 50%; 
+    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 header .option{
     
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,6 +135,7 @@ header .menu-second{
 /*Le corps */
 
 main{
+    padding-top: 60px;
     width: 100%;
     height: 820px;
 }
@@ -301,6 +314,7 @@ main table tr{
 /* Partie description des articles*/
 
 .description {
+    padding-top: 10%;
     background-color: var(--white);
     color: var(--grey);
 }
@@ -340,6 +354,7 @@ main table tr{
 /*Partie article en liaison*/
 
 .related{
+    width: 100%;
     font-size: 16px;
     display: flexbox;
     justify-content: center;
@@ -584,8 +599,8 @@ input[type="radio"] +label{
 
 .num {
     position: absolute;
-    top: 14px;
-    right: 20px;
+    top: 0px;
+    right: 30px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -654,6 +669,7 @@ input[type="radio"] +label{
 /*CSS de la page Contact US*/
 .desc {
 	padding: 50px 100px;
+    height: 500px;
 }
 
 .desc h3{

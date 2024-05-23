@@ -4,7 +4,10 @@ import {Layout} from './Layout.jsx';
 import {ErrorPage} from './error-page'
 import Auth from "../context/Auth.js";
 import { useContext } from 'react';
+import {CartContext} from '../pages/shop/components/CartContext'
 
+
+ 
 const HomeUI = lazy(() => import('../pages/home/home.ui'));
 const CheckoutUI = lazy(() => import('../pages/checkout/checkout.ui'));
 const SinglgeProductUI = lazy(() => import('../pages/singleprod/singleprod.ui'));
@@ -18,14 +21,14 @@ let CompteUI = lazy(() => import('../pages/compte/compte.ui'));
 const AboutUI = lazy(() => import('../pages/about/about.ui'));
 
 export default function AppRouter() {
-	const {isAuthenticated} = useContext(Auth);
+	
+	const { cart, ajouterDansPanier, supprimerDansPanier, hasAuthenticated, setHasAuthenticated} = useContext(CartContext)
 
-	if(isAuthenticated){
+	if(hasAuthenticated){
 		RegisterUI = CompteUI;
 	}
-	else{
-		CompteUI = RegisterUI;
-	}
+	
+	
 	const router = createBrowserRouter([
 		{
 			path: '/',

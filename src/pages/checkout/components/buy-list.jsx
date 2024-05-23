@@ -1,4 +1,23 @@
-export const BuyList =({name, price, qte, subtotal, total}) =>{
+import { useContext } from "react"
+import { CartContext } from "../../shop/components/CartContext"
+
+
+   
+
+
+
+
+export const BuyList =() =>{
+
+    const { cart, setCart} = useContext(CartContext)
+    console.log(cart)
+    
+  let total = 0;
+
+  for (const onecart of cart) {
+    total = total + onecart.prix * 1
+    console.log(total);
+  }
     return(
     <div className="payment">
         <table>
@@ -10,17 +29,21 @@ export const BuyList =({name, price, qte, subtotal, total}) =>{
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td style={{textAlign : "left"}}><i className="unactive">{name}</i> x {qte}</td>
-                    <td style={{textAlign : "right"}}>{price}</td>
-                </tr>
-                <tr>
-                    <td style={{textAlign : "left"}}>Subtotal</td>
-                    <td style={{textAlign : "right"}}>{subtotal}</td>
-                </tr>
+                {cart.map((item) => (
+                       <tr key={item.codePro}>
+                       <td style={{textAlign : "left"}}><i className="unactive">{item.nomPro}</i> x 1</td>
+                       <td style={{textAlign : "right"}}>{item.prix}</td>
+                       </tr>
+                       
+                )
+                    
+                 
+                )}
+                
+                
                 <tr>
                     <td style={{textAlign : "left"}}>Total</td>
-                    <td style={{textAlign : "right"}}><h2>{total}</h2></td>
+                    <td style={{textAlign : "right"}}><h2>{total} fCFA</h2></td>
                 </tr>
             </tbody>
                     

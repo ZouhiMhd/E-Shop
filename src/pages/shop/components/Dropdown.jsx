@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import '../../../../public/publicNath/styles/global2.css'
-
+import { axiosInstance } from '../../../axios';
 
 const DropdownMenu = ({onCategoryChange, selectedCategory}) => {
-  const options = ['All', 'homme', 'Femme', 'enfant','Mixte'];
+const [options, setOptions] = useState([]);
+	
+useEffect(() => { fetchCategories()}, [])
 
-
-
+const fetchCategories = () => {
+  axiosInstance.get("/categorie")
+    .then(function (response) {
+      if (response.status === 200) {
+        const allCategories = response.data.map(item => item.nomCat);
+        setOptions(["All", ...allCategories]);
+        console.log(options)
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
   const handleChange = (event) => {
     const category = event.target.value
     onCategoryChange(category);

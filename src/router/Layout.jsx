@@ -11,7 +11,9 @@ export function Layout() {
 				<PopupCart/>
 			</div>
 			<div id="conteneur">
+				<div>
 				<NavBar/>
+				</div>
 				<Outlet/>
 				<Footer/>
 			</div>

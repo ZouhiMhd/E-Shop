@@ -23,7 +23,7 @@ export const FormCheckUI = () => {
                     <FieldText name="phone">Phone</FieldText>
                     <FieldEmail name="email">Email address</FieldEmail>
                     <FieldText name="info"  text="Additionnal information"></FieldText>
-                    <FieldSubmit value="Continuer"/>
+                    {/* <FieldSubmit value="Continuer"/> */}
            
             </form> 
         </div>

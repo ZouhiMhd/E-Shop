@@ -27,15 +27,15 @@ export const PopupCart = () => {
             <hr/>
             <div className="bilan-article" style={{
                 overflow: 'auto',
-                height : '350px',
+                height : '300px',
                 }}>
-                {cart.map((e,index) =>
-                <Article key={index} article={e}></Article>
+                {cart.map((e) =>
+                <Article key={e.codePro} article={e}></Article>
                 )}
                 <div className="total">
                     <ul>
                         <li>Subtotal</li>
-                        <li className="sum">Rs.{total}</li>
+                        <li className="sum">{total} fCFA</li>
                     </ul>
                     <hr/>
                 </div>

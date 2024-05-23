@@ -4,15 +4,25 @@ import AppRouter from "./router/router.jsx";
 import { useEffect, useState } from "react";
 import { hasAuthenticated } from "./services/AuthAPI.js";
 import Auth from "./context/Auth.js";
-import axios from "axios";
+import {axiosInstance} from "./axios.js"
+import { article } from "../public/datas/ArticleList.js";
 
 function App() {
+
+	// const [categories, setCategories] = useState([]);
 	
 	// useEffect(() => {
-	//   axios.get("http://192.168.237.30:5000/api/produit")
+	//   axiosInstance.get("/produit")
 	// 		.then(function (response) {
 	// 			if (response.status ===200) {
-	// 				console.log(response)
+	// 				// setCategories(response.data);
+	// 				console.log(response.data)
+	// 				let allArticles = response.data
+	// 				console.log(allArticles)
+	// 				{
+	// 					allArticles.map((article) => { console.log(article.nomCat)})
+	// 				}
+	// 				console.log(response.data[0].categorie.nomCat)
 	// 			}
 				
 	// 		})
@@ -22,7 +32,6 @@ function App() {
 	// 		  })
 	// }, [])
 	
-  
 	 const [isAuthenticated, setIsAuthenticated] = useState(hasAuthenticated());
 	
 	return (

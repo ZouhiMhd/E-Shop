@@ -1,7 +1,21 @@
 import PropTypes from 'prop-types';
+import { EyeContext } from "./EyeContext";
+import { useContext } from 'react';
 
 
-export const Description = ({article1, article2}) =>{
+
+export const Description = () =>{
+    // const Desc = (article) =>{
+    //     if(article.photos.length===2){ 
+    //         return(  
+    //         <div>
+    //             <img key={article.codePro} src={article.photos[0].lienPhoto} alt="" />         
+    //         </div>)
+    //         }
+    // }
+   
+    const { eyeCart, ajouterDansEye} = useContext(EyeContext)
+    console.log(eyeCart.photos.length)
     return(
     <section className="description">
         <div className="options-desc">
@@ -18,15 +32,13 @@ export const Description = ({article1, article2}) =>{
         </div>
         <div className="article">
             <div>
-            {article1.map((e, index) => ( <img  key={index} src={e.img}/>
-                // eslint-disable-next-line react/no-array-index-key
-            ))}     
+                <img key={eyeCart.codePro} src={eyeCart.photos[0].lienPhoto} alt="" />    
             </div>
-            <div>
-            {article2.map((e, index) => ( <img  key={index} src={e.img}/>
-                // eslint-disable-next-line react/no-array-index-key
-            ))}      
-            </div>
+            {/* <Desc article={eyeCart}/> */}
+            
+                 <div>
+                     <img key={eyeCart.codePro} src={eyeCart.photos.length===2 ? eyeCart.photos[1].lienPhoto : ''} alt="" />         
+                 </div> 
             
         </div>
     </section>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Content6 ({img1, img2, img3, img4}) {
     return (
-        <section className="related" >
+        <section className="related" style={{width:"60%"}}>
      
         <div className="list-articles" style={{height : "100px"}}>
                 <div className="article-card">

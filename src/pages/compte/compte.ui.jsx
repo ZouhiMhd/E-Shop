@@ -1,10 +1,42 @@
 import {Photo} from "./components/Photo"
-import shirt from '../../../public/img/Mixte/man.png'
 import { InfoUser } from "./components/InfoUser"
+import { User } from "./components/user"
+import { Activites } from "./components/activites"
+import { Politique } from "./components/politique"
 
-export default function CompteUI() {
+const Me = [
+    {
+    nom:"Username",
+    email:"username@gmail.com",
+    adresse:"123 Main St, Cityville",
+    date:"JJ/MM/AAAA",
+    achats:2,
+    status:"Ancien",
+}
+];
+
+
+export default function CompteUI({user}) {
     return(<div id="conteneur">
-        <Photo img = {shirt}/>
-        <InfoUser/>
+        
+        <section> 
+        <User user={Me}  ></User>
+        <div style={
+            {display:"flex",
+            alignItems: "start",
+            justifyContent:"space-around",
+            "@media (max-width: 468px)": {
+                flexWrap:"wrap",
+                flexDirection: "column",
+                alignItems: "center", 
+              }
+            }}>
+            <InfoUser user={Me} />
+            <Activites user={Me} /> 
+        </div>
+       
+        <Politique/>
+        
+        </section>
     </div>)
 }
