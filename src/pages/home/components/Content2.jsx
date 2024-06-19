@@ -1,7 +1,8 @@
-import ArticleCard from './ArticleCard';
+import ArticleCardSlide from './ArticleCardSlide';
 import '../../../../public/publicNath/styles/global.css';
 import { useState, useEffect } from 'react';
 import { axiosInstance } from '../../../axios';
+import { autreArticles } from '../../../../public/datas/ArticleList';
 
 export default function Content2() {
   // const article = articleMixte;
@@ -46,11 +47,12 @@ export default function Content2() {
 			  })
 	
    }
-
+  
   return (
     <section className="home-content2">
       <div className="Table">        
-          <ArticleCard articles={allArticles} />
+          {/* <ArticleCard articles={allArticles} /> */}
+          <ArticleCardSlide articles={autreArticles} />
       </div>
     </section>
   );

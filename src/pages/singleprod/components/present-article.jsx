@@ -107,7 +107,7 @@ export const PresentArticle = () => {
                           ))} */}
 
                             <FieldText
-                            //  text= {product.size1}
+                             text= "choose a size"
                             >Size</FieldText>
                         {/* </ul>
                       </div>
@@ -118,7 +118,7 @@ export const PresentArticle = () => {
                               Color
                             </FieldText> 
                           ))}*/}
-                          <FieldText text="red blue white">Color</FieldText>
+                          <FieldText text="choose a color">Color</FieldText>
                         {/* </ul> */}
                       </div>
                     </div>
@@ -133,10 +133,11 @@ export const PresentArticle = () => {
                     <hr />
                     <table>
                       <tr>
-                        <td>SKU</td>
+                        <td>Prix unitaire</td>
                         {/* {eyeCart.map((e) => (
                           <td key={e.codePro}>: {e.codePro}</td>
                         ))} */}
+                        <td>: {eyeCart.prix} fCFA</td>
                         <td>
                           {/* : {product.codePro} */}
                           </td>
@@ -146,6 +147,7 @@ export const PresentArticle = () => {
                         {/* {eyeCart.map((e) => (
                           <td key={e.codePro}>: {e.categorie}</td>
                         ))} */}
+                        <td> : {eyeCart.nomCat}</td>
                         <td>
                           {/* : {product.categorie} */}
                           </td>

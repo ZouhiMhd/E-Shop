@@ -2496,10 +2496,30 @@ export const article = [
 export const autreArticles=[
 {
   nomPro: "Ensemble classe",
-  prix: 5000,
+  prix: 5010,
   photos: [{lienPhoto : Mixte10}],
-  categorie : "Homme",
+  nomCat : "Homme",
   codePro : "004",
+  description : "Fabriqué à la main en cuir de haute qualité. Conception élégante avec des détails ciselés. Fermeture à lacets à l’arrière pour un ajustement parfait.          Idéal pour les fêtes costumées, les événements médiévaux ou simplement pour ajouter une touche unique à votre garde-robe.",
+  size1 :"XL, XXL, M, ML",
+  color : "blanc, bleu, rouge, vert"
+},
+{
+  nomPro: "Ensemble classe",
+  prix: 5200,
+  photos: [{lienPhoto : Mixte10}],
+  nomCat : "Homme",
+  codePro : "104",
+  description : "Fabriqué à la main en cuir de haute qualité. Conception élégante avec des détails ciselés. Fermeture à lacets à l’arrière pour un ajustement parfait.          Idéal pour les fêtes costumées, les événements médiévaux ou simplement pour ajouter une touche unique à votre garde-robe.",
+  size1 :"XL, XXL, M, ML",
+  color : "blanc, bleu, rouge, vert"
+},
+{
+  nomPro: "Ensemble classe",
+  prix: 5300,
+  photos: [{lienPhoto : Mixte10}],
+  nomCat : "Homme",
+  codePro : "104",
   description : "Fabriqué à la main en cuir de haute qualité. Conception élégante avec des détails ciselés. Fermeture à lacets à l’arrière pour un ajustement parfait.          Idéal pour les fêtes costumées, les événements médiévaux ou simplement pour ajouter une touche unique à votre garde-robe.",
   size1 :"XL, XXL, M, ML",
   color : "blanc, bleu, rouge, vert"
@@ -2508,7 +2528,27 @@ export const autreArticles=[
   nomPro: "Ensemble classe",
   prix: 5000,
   photos: [{lienPhoto : Mixte10}],
-  categorie : "Homme",
+  nomCat : "Homme",
+  codePro : "104",
+  description : "Fabriqué à la main en cuir de haute qualité. Conception élégante avec des détails ciselés. Fermeture à lacets à l’arrière pour un ajustement parfait.          Idéal pour les fêtes costumées, les événements médiévaux ou simplement pour ajouter une touche unique à votre garde-robe.",
+  size1 :"XL, XXL, M, ML",
+  color : "blanc, bleu, rouge, vert"
+},
+{
+  nomPro: "Ensemble classe",
+  prix: 5400,
+  photos: [{lienPhoto : Mixte10}],
+  nomCat : "Homme",
+  codePro : "104",
+  description : "Fabriqué à la main en cuir de haute qualité. Conception élégante avec des détails ciselés. Fermeture à lacets à l’arrière pour un ajustement parfait.          Idéal pour les fêtes costumées, les événements médiévaux ou simplement pour ajouter une touche unique à votre garde-robe.",
+  size1 :"XL, XXL, M, ML",
+  color : "blanc, bleu, rouge, vert"
+},
+{
+  nomPro: "Ensemble classe",
+  prix: 5500,
+  photos: [{lienPhoto : Mixte10}],
+  nomCat : "Homme",
   codePro : "104",
   description : "Fabriqué à la main en cuir de haute qualité. Conception élégante avec des détails ciselés. Fermeture à lacets à l’arrière pour un ajustement parfait.          Idéal pour les fêtes costumées, les événements médiévaux ou simplement pour ajouter une touche unique à votre garde-robe.",
   size1 :"XL, XXL, M, ML",
@@ -2520,7 +2560,7 @@ export const autreFemme=[
     nomPro: "Ensemble classe",
     prix: 5000,
     photos: [{lienPhoto : Mixte10}],
-    categorie : "Homme",
+    nomCat : "Homme",
     codePro : "004",
     description : "Fabriqué à la main en cuir de haute qualité. Conception élégante avec des détails ciselés. Fermeture à lacets à l’arrière pour un ajustement parfait.          Idéal pour les fêtes costumées, les événements médiévaux ou simplement pour ajouter une touche unique à votre garde-robe.",
     size1 :"XL, XXL, M, ML",

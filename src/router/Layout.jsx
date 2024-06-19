@@ -1,6 +1,7 @@
 import {Outlet} from 'react-router-dom';
 import {NavBar} from "../components/nav-bar.jsx";
 import { Footer } from '../components/footer.jsx';
+
 import { PopupCart } from '../components/popup-cart.jsx';
 export function Layout() {
 	return (
